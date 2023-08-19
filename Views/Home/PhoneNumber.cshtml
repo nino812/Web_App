@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "PhoneNumber";
+}
+<head>
+    <meta charset="utf-8" />
+
+    <title>Device Page</title>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/MyContent/style.css">
+
+</head>
+<h2>PhoneNumber</h2>
+
+<div id="container" ng-controller="phoneController">
+    <div id="box">
+        <div class="input">
+            <label>Number:</label>
+            <input type="text" id="myInput" ng-model="NumberFilter" />
+            <br />
+            <label>Device:</label>
+            <device-selector ng-model="DeviceFilter"></device-selector>
+
+        </div>
+        <br />
+        <button ng-click="FilterPhones()" style="margin-left :150px;">Filter</button>
+        <button ng-click="openmodel(phone,devices)">Add</button>
+    </div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Phone Number</th>
+            <th>Device</th>
+
+        </tr>
+        <tr ng-repeat="phone in phones">
+            <td>{{ phone.Id }}</td>
+            <td>{{ phone.Number }}</td>
+            <td>{{ getDeviceName(phone.DeviceId) }}</td>
+
+            <td><button ng-click="openmodel(phone,devices)">Edit</button></td>
+        </tr>
+
+    </table>
+    <div class="success-message" ng-if="successMessage">{{ successMessage }}</div>
+    <div class="error-message" ng-if="errorMessage">{{ errorMessage }}</div>
+</div>

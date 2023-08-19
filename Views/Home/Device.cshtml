@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Device";
+}
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Device Page</title>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/MyContent/style.css">
+
+</head>
+<body>
+    <h2>Device</h2>
+    <div id="container" ng-controller="deviceController">
+        <div id="#box" style=" padding: 20px; border: grey solid; background-color: #8bd5d5;">
+            <div>
+                <label for="name" style="margin-left :100px;">Name:</label>
+                <input type="text" placeholder="Search.." ng-model="devname" id="myInput">
+            </div>
+            <br />
+            <div>
+                <button ng-click="Search()" style="margin-left :140px;">Search</button>
+                <button ng-click="openmodel()">Add</button>
+            </div>
+            @*<button ng-click="AddDevice()">Add</button>*@
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr ng-repeat="device in devices">
+                <td>{{ device.Id }}</td>
+                <td>{{ device.Name }}</td>
+                @*<td><button ng-click="UpdateDevice(device)">Edit</button>*@
+                <td><button ng-click="openmodel(device)">Edit</button>
+                <td><button style="background-color:palevioletred" ng-click="delete($index)">Delete</button></td>
+            </tr>
+        </table>
+        <div class="success-message" ng-if="successMessage">{{ successMessage }}</div>
+        <div class="error-message" ng-if="errorMessage">{{ errorMessage }}</div>
+    </div>
+ 
+</body>
+

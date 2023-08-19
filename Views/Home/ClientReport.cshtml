@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "ClientReport";
+}
+
+<h2>Client Report</h2>
+<br />
+<br />
+<div  ng-controller="clientController">
+    
+        <div class="input">
+            <label for="typeFilter" style="margin-left:475px;">Type:</label>
+            <select id="typeFilter" ng-model="clientTypeReport">
+                <option value="">All</option>
+                <option value="Individual">Individual</option>
+                <option value="Organization">Organization</option>
+            </select>
+            <button ng-click="GetClientsReport()">Filter</button>
+        </div>
+  
+   
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>No of Clients</th>
+        </tr>
+        <tr ng-repeat="report in clientsReport">
+            <td>{{ report.Type }}</td>
+            <td>{{ report.NbOfClients }}</td>
+        </tr>
+    </table>
+    </div>

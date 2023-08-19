@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title - My Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/angularJs")
+    @Scripts.Render("~/bundles/uiBootstrap")
+
+    @Styles.Render("~/MyContent/style")
+    @Scripts.Render("~/bundles/appJs")
+    @Scripts.Render("~/bundles/LoginJs")
+
+</head>
+<style>
+    body {
+        background: rgb(54,237,217);
+        background: radial-gradient(circle, rgba(54,237,217,1) 0%, rgba(0,139,139,1) 100%);
+    }
+</style>
+<body ng-app="myApp">
+    
+    @RenderBody()
+</body>
+</html>

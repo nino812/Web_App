@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Client";
+}
+<head>
+    <meta charset="utf-8" />
+
+    <title>Device Page</title>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/MyContent/style.css">
+
+</head>
+<h2 style="margin-right:10px;">Client</h2>
+<div id="container" ng-controller="clientController">
+    <div id="box">
+        <div class="input">
+            <label for="NameFilter">Name:</label>
+
+            <input type="text" name="NameFilter" id="myInput" ng-model="clientName" />
+            <br />
+            <label for="TypeFilter">Type:</label>
+            <client-type-filter ng-model="clientType"></client-type-filter>
+
+        </div>
+        <br />
+        <button ng-click="Search()" style="margin-left :150px;">Filter</button>
+
+        <button ng-click="openmodel(client)">Add</button>
+    </div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Birth Date</th>
+        </tr>
+        <tr ng-repeat="client in clients">
+            <td>{{ client.Id }}</td>
+            <td>{{ client.Name }}</td>
+            <td>{{ client.Type }}</td>
+            <td>{{ client.BirthDate }}</td>
+            <td><button ng-click="openmodel(client)">Edit</button></td>
+            <td>
+                <button style="background-color:palevioletred" ng-show="isPhoneNumberReserved(client.Id)" ng-click="UnReserve(client)">Unreserve</button>
+                <button style="background-color:darkcyan" ng-hide="isPhoneNumberReserved(client.Id)" ng-click="reservePhoneNumber(client.Id)">Reserve</button>
+            </td>
+        </tr>
+
+    </table>
+    <div class="success-message" ng-if="successMessage">{{ successMessage }}</div>
+    <div class="error-message" ng-if="errorMessage">{{ errorMessage }}</div>
+
+</div>

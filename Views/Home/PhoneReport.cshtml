@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "PhoneReport";
+}
+
+<h2>Phone Numbers Report</h2>
+<br />
+<br />
+<div ng-controller="phoneController">
+
+    <div class="input">
+        <label for="deviceFilter" style="margin-left:475px;">Device:</label>
+        <device-selector ng-model="DeviceFilter"></device-selector>
+        <select id="RegistrationFilter" ng-model="RegistrationFilter">
+            <option value="">All</option>
+            <option value="Reserved">Reserved</option>
+            <option value="UnReserved">Unreserved</option>
+        </select>
+        <button ng-click="GetPhoneReport()">Filter</button>
+    </div>
+
+
+    <table>
+        <tr>
+            <th>Device</th>
+            <th>Phone Number Status</th>
+            <th>Nb of Phone Numbers</th>
+
+        </tr>
+        <tr ng-repeat="phone in phoneReport">
+            <td>{{ getDeviceName(phone.DeviceId) }}</td>
+            <td>{{phone.Status}}</td>
+            <td>{{ phone.NbOfPhoneNumbers }}</td>
+
+        </tr>
+    </table>
+</div>

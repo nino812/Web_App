@@ -1,0 +1,142 @@
+﻿html {
+    margin: 0;
+    height: 100%;
+}
+
+#container {
+    position: relative;
+    top: 30px;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    padding: 0;
+    border: none;
+}
+
+h1, h3 {
+    color: darkcyan;
+    text-align: center;
+}
+h2{
+    text-align:center;
+}
+label {
+    margin: 5px;
+    margin-left: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: darkcyan;
+}
+
+input {
+    border: 1px solid #08acac;
+    padding: 2px;
+}
+
+button {
+    width: 80px;
+    margin: 5px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: darkcyan;
+    border: none;
+    border-radius: 8px;
+}
+
+table {
+    margin: 30px auto;
+    margin-top: 30px;
+    width: 100%;
+}
+
+th {
+    text-decoration-color: darkcyan;
+}
+
+table, tr, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+select{
+    margin:10px;
+}
+
+input[type=submit] {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    background-color: darkcyan;
+}
+.input {
+    margin-left: 25px;
+}
+#box{
+    padding:10px;
+    border: grey solid;
+    background-color:#8bd5d5;
+}
+#contain {
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 50px;
+    border: solid 2px #36edd9;
+    border-radius:3px;
+    background-color: white;
+}
+form{
+    position:center;
+    margin:40px;
+    padding:30px;
+}
+.user {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 15px;
+
+}
+.password {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right:10px;
+}
+.login {
+    margin-top:50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.success-message {
+ 
+    background-color: lightgreen;
+    border: 1px solid green;
+    padding: 8px;
+    margin-bottom: 10px;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    padding: 10px;
+    background-color: lightgreen; 
+    color: green;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999; 
+}
+
+.error-message {
+    border: 1px solid red;
+    padding: 8px;
+    margin-bottom: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #ffdddd;
+    color: red;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}

@@ -1,0 +1,27 @@
+﻿<!-- 
+<body>
+    <div ng-app="myApp"> -->
+       <!--  <script type="text/ng-template" id="../../modal/phoneModal.html"> -->
+<div class="phoneModal-modal">
+    <div class="modal-header">
+        <h3 class="modal-title" style="color:darkcyan">Phone Model</h3>
+    </div>
+    <div class="modal-body">
+
+        <input id="phone-num" type="text" ng-model='number' placeholder="Number.." />
+        <device-selector ng-model="device" devices="devices"></device-selector>
+
+        <!--       <select ng-model="device">
+              <option value="">All</option>
+              <option ng-repeat="device in devices" value="{{device.Id}}">{{device.Id}}</option>
+          </select> -->
+    </div>
+    <div class="modal-footer">
+        <button class="btn1" ng-click="ok()">Save</button>
+        <button class="btn2" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
+      <!--   </script>
+    </div>
+
+</body> -->

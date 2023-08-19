@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "PhoneReservation";
+}
+
+<h2>Reservation</h2>
+
+
+<div id="container" ng-controller="reservationController">
+    <div id="box">
+        <div class="input">
+            <label>Client:</label>
+            <client-selector ng-model="ClientFilter" get-data="GetAllClients()"></client-selector>
+        </div>
+
+        <div class="input">
+            <label>Phone Number:</label>
+            <phone-selector ng-model="PhoneNumberFilter" get-data="GetAllPhoneNumbers()" ></phone-selector>
+        </div>
+
+        <br />
+        <button ng-click="FilterReservations()" style="margin-left :150px;" >Filter</button>
+     
+    </div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Client</th>
+            <th>Phone Number</th>
+            <th>BED</th>
+            <th>EED</th>
+        </tr>
+        <tr ng-repeat="reservation in reservations">
+            <td>{{ reservation.Id }}</td>
+            <td>{{ getClientName(reservation.Client) }}</td>
+            <td>{{ reservation.PhoneNumber }}</td>
+            <td>{{ reservation.BED }}</td>
+            <td>{{ reservation.EED ? reservation.EED : 'N/A' }}</td>
+        </tr>
+    </table>
+
+</div>

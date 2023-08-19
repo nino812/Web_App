@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+@{
+    ViewBag.Title = "Login";
+}
+
+<div id="contain" ng-controller="loginController">
+    <h2 style="color:darkcyan;">Login</h2>
+    <form ng-submit="login()">
+        <div class="user">
+            <label for="username">Username:</label>
+            <input type="text" id="username" ng-model="user.Username" required />
+        </div>
+        <div class="password">
+            <label for="password">Password:</label>
+            <input type="password" id="password" ng-model="user.Password" required />
+        </div>
+        <div class="login">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+  
+</div>

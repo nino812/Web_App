@@ -1,0 +1,32 @@
+﻿ <!-- 
+<body>
+<div ng-app="myApp">
+    
+    <script type="text/ng-template" id="../../modal/clientModal.html"> -->
+<div class="clientModal-modal">
+    <div class="modal-header">
+        <h3 class="modal-title" style="color:darkcyan">Client Modal</h3>
+    </div>
+    <div class="modal-body">
+
+        <label for="NameFilter">Name:</label>
+        <input type="text" name="NameFilter" id="myInput" ng-model="clientName" />
+        <br />
+
+        <label for="TypeFilter">Type:</label>
+        <select name="TypeFilter" ng-model="clientType">
+            <option value="">All</option>
+            <option value="Individual">Individual</option>
+            <option value="Organization">Organization</option>
+        </select>
+        <input type="date" ng-model="clientBirthDate" />
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn1" ng-click="ok()">Save</button>
+        <button class="btn2" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
+<!--     </script>
+</div>
+</body> -->

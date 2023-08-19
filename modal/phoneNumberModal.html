@@ -1,0 +1,22 @@
+﻿<body>
+    <div ng-app="myApp">
+        <script type="text/ng-template" id="../../modal/phoneNumberModal.html">
+
+              <div class="modal-header">
+                  <h3 class="modal-title" style="color:darkcyan">Phone Model</h3>
+              </div>
+              <div class="modal-body">
+                  <label for="phoneNumber">Phone Number</label>
+            <phone-selector ng-model="PhoneNumberFilter" get-data="GetAllPhoneNumbers()" ></phone-selector>
+
+
+              </div>
+              <div class="modal-footer">
+                  <button class="btn1" ng-click="ok()">Save</button>
+                  <button class="btn2" ng-click="cancel()">Cancel</button>
+              </div>
+
+        </script>
+    </div>
+
+</body>
